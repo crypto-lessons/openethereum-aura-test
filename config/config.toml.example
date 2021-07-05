@@ -27,8 +27,7 @@ discovery = false
 interface = "0.0.0.0"
 hosts = ["all"]
 apis = ["all"]
-origins = ["http://127.0.0.1:*", "chrome-extension://*", "moz-extension://*"]
-# origins = ["all"]
+origins = ["all"]
 
 [rpc]
 interface = "0.0.0.0"

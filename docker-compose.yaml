@@ -20,14 +20,14 @@ services:
     container_name: openethereum_node
     hostname: openethereum_node
     ports:
-      - 8545:${JSONRPC_PORT}
-      - 8546:${NETWORK_PORT}
+      - 9545:${JSONRPC_PORT}
+      - 9546:${NETWORK_PORT}
       - 30303:${WS_PORT}
   ethereumlite_explorer:
     image: alethio/ethereum-lite-explorer
     container_name: ethereumlite_explorer
     environment:
-      - APP_NODE_URL=${JSONRPC_BASE_URL}:${JSONRPC_PORT}
+      - APP_NODE_URL=${JSONRPC_BASE_URL}:9545
     ports:
       - 8080:80
 
